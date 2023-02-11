@@ -83,6 +83,7 @@ driver.find_element(By.ID, 'NextButton').click()
 driver.find_element(By.CSS_SELECTOR, '#FNSR000002 > div > div > div.Opt1.rbloption > label').click()
 driver.find_element(By.ID, 'NextButton').click()
 
+#selecionar se estava com criança ou não
 
 
 
