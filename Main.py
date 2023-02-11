@@ -2,6 +2,7 @@
 import pyautogui
 import datetime
 import Comentarios
+import Lista_pessoas
 import random
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
