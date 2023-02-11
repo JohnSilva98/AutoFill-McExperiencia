@@ -14,10 +14,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 
-
-
-
-
 # Inicializa o driver do navegador e maximiza a janela
 driver = webdriver.Chrome()
 driver.maximize_window()
@@ -27,11 +23,9 @@ driver.maximize_window()
 driver.get("https://www.mcexperienciasurvey.com/Index.aspx?LanguageID=pt-BR")
 
 
-
 #Carrega a versão com acessibilidade e seleciona o pais Brasil
 driver.find_element(By.XPATH, '//*[@id="surveyQuestions"]/p/a').click()
 driver.find_element(By.XPATH, '//*[@id="Index_CountryPicker.3"]').click()
-
 
 #rolar a pagina até o botão avançar
 nextButton = driver.find_element(By.XPATH, '//*[@id="NextButton"]')
@@ -49,7 +43,6 @@ drop_dia.select_by_value(str(data.day))
 
 
 # Seleciona o mês atual no dropdown
-
 drop_mes= Select(driver.find_element(By.ID, 'InputMonth'))
 drop_mes.select_by_value(str(mes))
 
@@ -70,7 +63,6 @@ drop_min = Select(driver.find_element(By.ID, 'InputMinute'))
 drop_min.select_by_value(minutos)
 
 #Marcar o aceite dos termos
-
 #rolar a pagina até o botão aceite
 eula = driver.find_element(By.XPATH, '//*[@id="Index_OptIn"]')
 driver.execute_script("arguments[0].scrollIntoView();", eula)
@@ -78,7 +70,6 @@ eula.click()
 
 #Iniciar o form
 Iniciar = driver.find_element(By.ID, 'NextButton').click()
-
 
 #Selecionar form balcão
 form = WebDriverWait(driver,5).until(EC.element_to_be_clickable((By.CSS_SELECTOR, '#FNSR000001 > div > div > div.Opt1.rbloption > label')))
