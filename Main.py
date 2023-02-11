@@ -1,6 +1,7 @@
 #Importar bibliotecas
 import pyautogui
 import datetime
+import Comentarios
 import random
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -116,7 +117,12 @@ driver.find_element(By.XPATH, '//*[@id="R000015.5"]').click()
 driver.find_element(By.XPATH, '//*[@id="R000016.10"]').click()
 driver.find_element(By.ID, 'NextButton').click()
 
+#comentário
+coment = driver.find_element(By.XPATH, '//*[@id="S000019"]')
+coment.click()
+coment.send_keys(Comentarios.comment)
 
+#preencher dados
 
 
 

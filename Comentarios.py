@@ -10,8 +10,8 @@ positive_comments = [
     "Sem dúvida, este é um dos melhores McDonald's que já fui. A comida é incrível e o ambiente é limpo!",
     "O atendimento foi rápido, os atendentes super atenciosos"
     "Lanche gostoso, muito bom nota 10"
-    
-]
 
+]
+comment = random.choice(positive_comments)
 # imprimindo um comentário positivo aleatório
-print(random.choice(positive_comments))
+#print(random.choice(positive_comments))
