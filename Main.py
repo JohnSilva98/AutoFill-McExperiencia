@@ -88,6 +88,10 @@ driver.find_element(By.CSS_SELECTOR, '#FNSR000002 > div > div > div.Opt1.rblopti
 driver.find_element(By.ID, 'NextButton').click()
 
 #selecionar se estava com criança ou não
+Resp = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="R000003.1"]')))
+Resp.click()
+#driver.find_element(By.CSS_SELECTOR, '//*[@id="R000003.1"]').click
+driver.find_element(By.ID, 'NextButton').click()
 
 
 
