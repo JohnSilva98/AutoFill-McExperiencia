@@ -72,7 +72,7 @@ eula.click()
 Iniciar = driver.find_element(By.ID, 'NextButton').click()
 
 #Selecionar form balcão
-form = WebDriverWait(driver,5).until(EC.element_to_be_clickable((By.CSS_SELECTOR, '#FNSR000001 > div > div > div.Opt1.rbloption > label')))
+form = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, '#FNSR000001 > div > div > div.Opt1.rbloption > label')))
 form.click()
 
 #avançar para próxima tela
