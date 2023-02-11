@@ -1,4 +1,5 @@
 #Importar bibliotecas
+import pyautogui
 import datetime
 import random
 import select
@@ -6,6 +7,8 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
+import tkinter as tk
+from tkinter import messagebox
 
 
 
@@ -68,3 +71,13 @@ eula.click()
 
 #Iniciar o form
 Iniciar = driver.find_element(By.ID, 'NextButton').click()
+
+
+#Selecionar form balcão
+radios = driver.find_element(By.CSS_SELECTOR, '#FNSR000001 > div > div > div.Opt1.rbloption > label').click()
+
+
+
+
+
+
