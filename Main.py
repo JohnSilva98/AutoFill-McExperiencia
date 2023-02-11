@@ -24,6 +24,7 @@ driver.maximize_window()
 driver.get("https://www.mcexperienciasurvey.com/Index.aspx?LanguageID=pt-BR")
 
 
+
 #Carrega a versão com acessibilidade e seleciona o pais Brasil
 driver.find_element(By.XPATH, '//*[@id="surveyQuestions"]/p/a').click()
 driver.find_element(By.XPATH, '//*[@id="Index_CountryPicker.3"]').click()
@@ -93,8 +94,18 @@ Resp.click()
 #driver.find_element(By.CSS_SELECTOR, '//*[@id="R000003.1"]').click
 driver.find_element(By.ID, 'NextButton').click()
 
+#Selecionar satisfação geral
+driver.find_element(By.XPATH, '//*[@id="R000004.5"]').click()
+driver.find_element(By.ID, 'NextButton').click()
 
-
+#selecionar lista de satisfações
+Sabor = driver.find_element(By.XPATH, '//*[@id="R000008.5"]').click()
+Cordialidade = driver.find_element(By.XPATH, '//*[@id="R000007.5"]').click()
+QualidadeComida = driver.find_element(By.XPATH, '//*[@id="R000009.5"]').click()
+LimpezaRestaurante = driver.find_element(By.XPATH, '//*[@id="R000010.5"]').click()
+Rapidez = driver.find_element(By.XPATH, '//*[@id="R000006.5"]').click()
+CxB = driver.find_element(By.XPATH, '//*[@id="R000012.5"]').click()
+driver.find_element(By.ID, 'NextButton').click()
 
 
 
