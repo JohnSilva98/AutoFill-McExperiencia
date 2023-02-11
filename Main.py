@@ -59,5 +59,9 @@ drop_hora.select_by_value(hora)
 drop_min = Select(driver.find_element(By.ID, 'InputMinute'))
 drop_min.select_by_value(minutos)
 
+#Marcar o aceite dos termos
 
-
+#rolar a pagina até o botão aceite
+eula = driver.find_element(By.XPATH, '//*[@id="Index_OptIn"]')
+driver.execute_script("arguments[0].scrollIntoView();", eula)
+eula.click()
