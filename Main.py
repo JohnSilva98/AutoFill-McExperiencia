@@ -1,5 +1,6 @@
 #Importar bibliotecas
 import datetime
+import random
 import select
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -45,3 +46,18 @@ drop_mes.select_by_value(str(mes))
 # Seleciona o ano atual no dropdown
 drop_ano = Select(driver.find_element(By.ID, 'InputYear'))
 drop_ano.select_by_value(str(data.year))
+
+#Preencher hora atual, com leves atrasos
+hora = str(data.hour).zfill(2)#pega a hora atual
+minutos = str((data.minute - random.randint(1, 10)) % 60).zfill(2)#pega os minutos atuais e cria um atraso aleatório
+
+#seleciona a hora
+drop_hora = Select(driver.find_element(By.ID, 'InputHour'))
+drop_hora.select_by_value(hora)
+
+#seleciona os minutos, garantindo um atraso
+drop_min = Select(driver.find_element(By.ID, 'InputMinute'))
+drop_min.select_by_value(minutos)
+
+
+
