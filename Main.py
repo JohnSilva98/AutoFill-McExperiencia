@@ -107,5 +107,16 @@ Rapidez = driver.find_element(By.XPATH, '//*[@id="R000006.5"]').click()
 CxB = driver.find_element(By.XPATH, '//*[@id="R000012.5"]').click()
 driver.find_element(By.ID, 'NextButton').click()
 
+#pedido correto
+driver.find_element(By.XPATH, '//*[@id="FNSR000013"]/td[1]').click()
+driver.find_element(By.ID, 'NextButton').click()
+
+#Nota 0 - 10
+driver.find_element(By.XPATH, '//*[@id="R000015.5"]').click()
+driver.find_element(By.XPATH, '//*[@id="R000016.10"]').click()
+driver.find_element(By.ID, 'NextButton').click()
+
+
+
 
 
