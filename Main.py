@@ -122,8 +122,36 @@ driver.find_element(By.ID, 'NextButton').click()
 coment = driver.find_element(By.XPATH, '//*[@id="S000019"]')
 coment.click()
 coment.send_keys(Comentarios.comment)
+driver.find_element(By.ID, 'NextButton').click()
+
+#problemas na visita?
+driver.find_element(By.XPATH, '//*[@id="R000020.2"]').click()
+driver.find_element(By.ID, 'NextButton').click()
 
 #preencher dados
+#nome
+nome = driver.find_element(By.XPATH, '//*[@id="S000036"]')
+nome.click()
+nome.send_keys(Lista_pessoas.first_name)
+#sobrenome
+sobrenome = driver.find_element(By.XPATH, '//*[@id="S000028"]')
+sobrenome.click()
+sobrenome.send_keys(Lista_pessoas.last_name)
+#telefone
+telefone = driver.find_element(By.XPATH, '//*[@id="S000035"]')
+telefone.click()
+telefone.send_keys(Lista_pessoas.telefone)
+#email
+email = driver.find_element(By.XPATH, '//*[@id="S000033"]')
+email.click()
+email.send_keys(Lista_pessoas.email)
+confirmaEmail = driver.find_element(By.XPATH, '//*[@id="S000034"]')
+confirmaEmail.click()
+confirmaEmail.send_keys(Lista_pessoas.email)
+driver.find_element(By.ID, 'NextButton').click()
+
+#ultima tela
+
 
 
 
