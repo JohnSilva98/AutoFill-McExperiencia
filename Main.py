@@ -76,6 +76,10 @@ Iniciar = driver.find_element(By.ID, 'NextButton').click()
 #Selecionar form balcão
 radios = driver.find_element(By.CSS_SELECTOR, '#FNSR000001 > div > div > div.Opt1.rbloption > label').click()
 
+#avançar para próxima tela
+driver.find_element(By.ID, 'NextButton').click()
+
+
 
 
 
