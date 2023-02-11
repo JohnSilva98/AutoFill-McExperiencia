@@ -11,5 +11,6 @@ for i in range(500):
     person = {"nome": first_name, "sobrenome": last_name, "telefone": fake.phone_number(), "email": f"{first_name.lower()}.{last_name.lower()}@gmail.com"}
     people_list.append(person)
 
-# imprimindo as informações de uma pessoa aleatória da lista
-print(random.choice(people_list))
+#variavel que recebe a pessoa gerada
+pessoa=random.choice(people_list)
+

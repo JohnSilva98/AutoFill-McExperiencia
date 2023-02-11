@@ -12,6 +12,6 @@ positive_comments = [
     "Lanche gostoso, muito bom nota 10"
 
 ]
+#variavel que recebe o comentario aleatorio
 comment = random.choice(positive_comments)
-# imprimindo um comentário positivo aleatório
-#print(random.choice(positive_comments))
+
