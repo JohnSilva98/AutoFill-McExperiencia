@@ -65,3 +65,6 @@ drop_min.select_by_value(minutos)
 eula = driver.find_element(By.XPATH, '//*[@id="Index_OptIn"]')
 driver.execute_script("arguments[0].scrollIntoView();", eula)
 eula.click()
+
+#Iniciar o form
+Iniciar = driver.find_element(By.ID, 'NextButton').click()
