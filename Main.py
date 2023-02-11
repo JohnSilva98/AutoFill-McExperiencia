@@ -1,8 +1,11 @@
 #Importar bibliotecas
+import datetime
+import select
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import Select
 
 
 # Inicializa o driver do navegador e maximiza a janela
@@ -27,3 +30,17 @@ nextButton.click()
 #Preencher CNPJ, data e horário
 cnpj = driver.find_element(By.ID, 'InputCNPJ')
 cnpj.send_keys("42591651067051")
+data = datetime.datetime.now()#pega a data atual
+
+# Seleciona o dia atual no dropdown
+drop_dia = Select(driver.find_element(By.ID, 'InputDay'))
+drop_dia.select_by_value(str(data.day))
+
+
+# Seleciona o mês atual no dropdown
+drop_mes= Select(driver.find_element(By.ID, 'InputMonth'))
+drop_mes.select_by_value(str(data.month))
+
+# Seleciona o ano atual no dropdown
+drop_ano = Select(driver.find_element(By.ID, 'InputYear'))
+drop_ano.select_by_value(str(data.year))
