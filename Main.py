@@ -1,5 +1,5 @@
 '''
-O código abaixo foi feitousando os recursos da biblioteca selenium webdriver.
+O código abaixo foi feitousando os recursos da biblioteca selenium webdriver e faker.
 Autor: Jonathan Silva
 Data Criação: 11/02/2023
 
@@ -157,7 +157,7 @@ driver.find_element(By.ID, 'NextButton').click()
 driver.find_element(By.XPATH, '//*[@id="R000040.1"]').click()
 driver.find_element(By.ID, 'NextButton').click()
 sleep(5)
-#driver.quit()
+driver.quit()
 
 
 
