@@ -156,7 +156,7 @@ driver.find_element(By.ID, 'NextButton').click()
 #ultima tela
 driver.find_element(By.XPATH, '//*[@id="R000040.1"]').click()
 driver.find_element(By.ID, 'NextButton').click()
-sleep(5)
+sleep(3)
 driver.quit()
 
 
