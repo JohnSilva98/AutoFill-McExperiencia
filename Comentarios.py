@@ -37,9 +37,6 @@ positive_comments = [
     "Esse lanche estava uma delícia, nota 10 "
     "Atendimento ágil e simpático"
 
-
-
-
 ]
 #variavel que recebe o comentario aleatorio
 comment = random.choice(positive_comments)
